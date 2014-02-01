@@ -41,7 +41,7 @@ end
 gem 'jquery-rails'
 
 group :production do
-  gem 'therubyracer'
+  gem 'therubyracer', '~> 0.12.0'
 end
 
 group :development do
