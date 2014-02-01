@@ -24,7 +24,7 @@ Any questions and suggestions are welcome, please contact me: flyerhzm@railsbp.c
 
 3. Setup database
 
-        rake db:create && rake db:migrate && rake db:seed
+        bundle exec rake db:create db:migrate db:seed
 
 4. Generate CSS sprite
 
