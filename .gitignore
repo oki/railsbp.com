@@ -12,3 +12,5 @@ NERD_tree_1
 bin/
 coverage/
 brakeman.html
+config/rails_best_practices.yml
+railsbp.com/
