@@ -85,7 +85,6 @@ class Build < ActiveRecord::Base
     system("mkdir", "-p", analyze_path)
     Dir.chdir(analyze_path)
     system("git", "clone", repository.clone_url)
-    system("rm", "#{repository.name}/.rvmrc")
     Dir.chdir(repository.name)
     system("git", "reset", "--hard", last_commit_id)
     system("cp", repository.config_file_path, config_directory_path)
@@ -146,6 +145,6 @@ class Build < ActiveRecord::Base
 
   protected
     def remove_analyze_file
-      FileUtils.rm(analyze_file) if File.exist?(analyze_file)
+      FileUtils.rm(analyze_path) if File.exist?(analyze_path)
     end
 end
